@@ -509,7 +509,7 @@ opencv-vision-artificial-java/
 ## Autor
 
 **Alejandro De Mendoza**  
-Estudiante de Ingeniería Informática — Séptimo Semestre  
+Ingeniería Informática  
 *Sistemas Multiagente y Percepción Computacional*
 
 [![GitHub](https://img.shields.io/badge/GitHub-AlejoTechEngineer-181717?style=flat-square&logo=github)](https://github.com/AlejoTechEngineer)
