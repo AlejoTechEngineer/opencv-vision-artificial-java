@@ -45,42 +45,19 @@ Cada rutina está diseñada como una clase ejecutable independiente (`main` prop
 
 ---
 
-## Arquitectura del Sistema
+## Arquitectura
 
+```mermaid
+flowchart TD
+    A[LaboratorioOpenCV.java - Verificacion] --> B[System.loadLibrary - opencv_java4100.dll]
+    B --> C[Rutina1Basico.java - Espacio Color + Umbral]
+    B --> D[Rutina2Bordes.java - Canny + Sobel]
+    B --> E[Rutina3Rostros.java - Haar Cascade + DNN]
+    B --> F[Rutina4Transformaciones.java - Resize - Rotate - Flip]
+    C & D & F --> G[Imagenes/foto1.png]
+    E --> H[Imagenes/foto2.jpg - Imagen con Personas]
+    C & D & E & F --> I[PNG Resultados - Salidas Procesadas]
 ```
-LaboratorioOpenCV/
-│
-├── src/laboratorioopencv/
-│   ├── LaboratorioOpenCV.java      ← Entry point / verificación de instalación
-│   ├── Rutina1Basico.java          ← Espacio de color, suavizado, umbralización
-│   ├── Rutina2Bordes.java          ← Detección de bordes (Canny + Sobel)
-│   ├── Rutina3Rostros.java         ← Detección de rostros (Haar Cascade)
-│   └── Rutina4Transformaciones.java ← Redimensionado, rotación, volteo
-│
-├── Imagenes/
-│   ├── foto1.png                   ← Imagen base (rutinas 1, 2, 4)
-│   ├── foto2.jpg                   ← Imagen con personas (rutina 3)
-│   └── [resultados generados]      ← Salidas PNG de cada rutina
-│
-├── nbproject/                      ← Configuración NetBeans / Ant
-│   ├── project.xml
-│   ├── project.properties          ← Classpath, JVM args, plataforma
-│   └── build-impl.xml
-│
-└── build.xml                       ← Script Ant principal
-```
-
-**Decisiones de arquitectura clave:**
-
-| Decisión | Justificación |
-|---|---|
-| Clase ejecutable independiente por rutina | Permite evaluación y depuración modular sin acoplamiento entre ejercicios |
-| Carga nativa explícita con `System.loadLibrary` | OpenCV requiere cargar la DLL nativa (`opencv_java4100.dll`) antes de cualquier llamada a la API |
-| Rutas de archivo hardcodeadas | Laboratorio académico; la portabilidad no es objetivo; simplifica el código de demostración |
-| Java 1.8 como source/target con JDK 17 | Garantiza compatibilidad con versiones antiguas de la JVM manteniendo el toolchain moderno |
-| Ant como sistema de build | NetBeans genera automáticamente `build.xml`; integración nativa sin configuración adicional |
-
----
 
 ## Rutinas Implementadas
 
