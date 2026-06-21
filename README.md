@@ -35,6 +35,16 @@
 
 ---
 
+## Descripción del Proyecto
+
+Este repositorio contiene la implementación del **Laboratorio No. 2** de la asignatura *Sistemas Multiagente y Percepción Computacional* del séptimo semestre de Ingeniería Informática. El proyecto explora el procesamiento digital de imágenes mediante la librería **OpenCV 4.10.0** integrada con **Java**, utilizando **NetBeans IDE** como entorno de desarrollo y **Apache Ant** como sistema de construcción.
+
+El trabajo está dividido en **4 rutinas independientes** que cubren las operaciones más fundamentales en visión por computador: desde transformaciones básicas de espacio de color, pasando por algoritmos de detección de bordes basados en gradientes, hasta técnicas de detección de objetos en tiempo real mediante clasificadores en cascada Haar.
+
+Cada rutina está diseñada como una clase ejecutable independiente (`main` propio), lo que permite su evaluación de forma modular y facilita la comprensión aislada de cada conjunto de técnicas.
+
+---
+
 ## Arquitectura
 
 ```mermaid
@@ -48,16 +58,6 @@ flowchart TD
     E --> H[Imagenes/foto2.jpg - Imagen con Personas]
     C & D & E & F --> I[PNG Resultados - Salidas Procesadas]
 ```
-
-## Descripción del Proyecto
-
-Este repositorio contiene la implementación del **Laboratorio No. 2** de la asignatura *Sistemas Multiagente y Percepción Computacional* del séptimo semestre de Ingeniería Informática. El proyecto explora el procesamiento digital de imágenes mediante la librería **OpenCV 4.10.0** integrada con **Java**, utilizando **NetBeans IDE** como entorno de desarrollo y **Apache Ant** como sistema de construcción.
-
-El trabajo está dividido en **4 rutinas independientes** que cubren las operaciones más fundamentales en visión por computador: desde transformaciones básicas de espacio de color, pasando por algoritmos de detección de bordes basados en gradientes, hasta técnicas de detección de objetos en tiempo real mediante clasificadores en cascada Haar.
-
-Cada rutina está diseñada como una clase ejecutable independiente (`main` propio), lo que permite su evaluación de forma modular y facilita la comprensión aislada de cada conjunto de técnicas.
-
----
 
 ## Rutinas Implementadas
 
